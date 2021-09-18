@@ -7,6 +7,7 @@ import About from "./Pages/About";
 import Discography from "./Pages/Discography";
 import styled from "styled-components";
 import { AnimatePresence } from "framer-motion";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const Pages = styled.div`
 
@@ -32,13 +33,18 @@ const Pages = styled.div`
   }
 `;
 
-
-
-
 function App() {
   const location = useLocation();
   return (
     <>
+    <HelmetProvider>
+        <Helmet>
+            <meta charSet="utf-8" />
+            <title>Skov. Music</title>
+            <link rel="canonical" href="http://www.skovmusic.com" />
+            <meta name="description" content="Description" CONTENT="Victoria British Columbia rock band. Music. Local band, Victoria BC. " />
+        </Helmet>
+      </HelmetProvider>
       <Sidebar />
 
         <Pages>

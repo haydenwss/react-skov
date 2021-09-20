@@ -22,7 +22,9 @@ const Pages = styled.div`
   @media (max-width: 1000px) {
     background-position: 20% 50%;
   }
-
+  @media (max-width: 600px) {
+    background-position: 40% 50%;
+  }
  
 
   h1 {
